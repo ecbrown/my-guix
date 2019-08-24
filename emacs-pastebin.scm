@@ -22,7 +22,7 @@
   #:use-module ((guix licenses) #:prefix license:))
 
 (define-public emacs-pastebin
-  (let ((commit "46a0e012648d9104953fbd908054c26d1e0aa97c")
+  (let ((commit "b8cba70821e84aad7561787c99ebdca1bd8c5d42")
         (revision "1"))
     (package
       (name "emacs-pastebin")
@@ -43,7 +43,7 @@
       (home-page
        "https://github.com/dhilst/emacs-pastebin/")
       (synopsis
-       "Emacs Pastebin Interface")
+       "Emacs pastebin interface")
       (description
-       "This is an interface to pastebin.com With it, you can paste buffers; fetch, delete, and list pastes. Additionally, it is possible to sort the paste lists by date, title, private, format, and key. ")
+       "This is an interface to pastebin.com. With it, you can paste buffers, and fetch, delete, and list pastes. Additionally, it is possible to sort the paste lists by various attributes.")
       (license license:gpl2+))))
