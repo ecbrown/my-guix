@@ -2,4 +2,5 @@ Here are a few of my favorite packages for Guix, that are either in development,
 or have not yet met the quality requirements of Guix upstream.
 
 - Emacs Pastebin (emacs-pastebin)
+- Spacemacs Theme (emacs-spacemacs-theme)
 - Sunrise Commander (emacs-sunrise-commander)
