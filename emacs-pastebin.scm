@@ -37,7 +37,7 @@
          (file-name (git-file-name name commit))
          (sha256
           (base32
-           "0b9bmb2c717fhdzapk85rm2s8q7hs19h55mbhzzwy78p4f6p8z9i"))))
+           "1yhz6hxrmal4rlg4dpcd264g9w7zazmp7686ldpqrbxiygqanr05"))))
       (build-system emacs-build-system)
       (arguments '(#:include '("\\.el$")))
       (home-page
