@@ -45,5 +45,7 @@
       (synopsis
        "Emacs pastebin interface")
       (description
-       "This is an interface to pastebin.com. With it, you can paste buffers, and fetch, delete, and list pastes. Additionally, it is possible to sort the paste lists by various attributes.")
+       "This is an interface to pastebin.com. With it, you can paste buffers,
+and fetch, delete, and list pastes. Additionally, it is possible to sort the
+paste lists by various attributes.")
       (license license:gpl2+))))
