@@ -15,6 +15,9 @@
 ;;; You should have received a copy of the GNU General Public License
 ;;; along with GNU Guix.  If not, see <http://www.gnu.org/licenses/>.
 
+
+; Builds, but breaks with Segmentation Fault
+
 (define-module (nextcloud-client)
   #:use-module ((guix licenses) #:prefix license:)
   #:use-module (guix build-system cmake)
@@ -23,6 +26,7 @@
   #:use-module (gnu packages)
   #:use-module (gnu packages check)
   #:use-module (gnu packages compression)
+  #:use-module (gnu packages gcc)
   #:use-module (gnu packages glib)
   #:use-module (gnu packages perl)
   #:use-module (gnu packages pkg-config)
@@ -76,13 +80,16 @@
 ;               (("QCoreApplication::applicationFilePath\\()") "\"owncloud\""))
 ;             #t))
 ;         (delete 'patch-dot-desktop-files))
-       #:configure-flags '("-DUNIT_TESTING=ON"
+       #:configure-flags '(
+                           "-DUNIT_TESTING=ON"
                            ;; build without qtwebkit, which causes the
                            ;; package to FTBFS while looking for QWebView.
-                           "-DNO_SHIBBOLETH=1")))
+                           "-DNO_SHIBBOLETH=1"
+			   )))
     (native-inputs
-     `(("cmocka" ,cmocka)
-       ("glib" ,glib)
+     `(
+;       ("cmocka" ,cmocka)
+;       ("glib" ,glib)
        ("perl" ,perl)
        ("pkg-config" ,pkg-config)
        ("qtlinguist" ,qttools)
@@ -91,9 +98,10 @@
      `(("openssl" ,openssl-next)
        ("qtbase" ,qtbase)
        ("qtkeychain" ,qtkeychain)
-       ("qtwebview" ,qtwebview)
+;       ("qtwebview" ,qtwebview)
        ("sqlite" ,sqlite)
-       ("zlib" ,zlib)))
+       ("zlib" ,zlib)
+       ))
     (home-page "https://nextcloud.org")
     (synopsis "Folder synchronization with a Nextcloud server")
     (description "The Nextcloud system lets you always have your
