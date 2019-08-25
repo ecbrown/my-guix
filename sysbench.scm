@@ -52,17 +52,17 @@
        #:configure-flags '("--with-system-luajit")
        #:phases
        (modify-phases %standard-phases
-		     (delete 'bootstrap)
-		     (add-after 'patch-source-shebangs 'libtoolize
+         (delete 'bootstrap)
+         (add-after 'patch-source-shebangs 'libtoolize
            (lambda _ (invoke "libtoolize" "--copy" "--force")))
-		     (add-after 'libtoolize 'aclocal
+         (add-after 'libtoolize 'aclocal
            (lambda _ (invoke "aclocal" "-I" "m4")))
-		     (add-after 'aclocal 'autoreconf
+         (add-after 'aclocal 'autoreconf
            (lambda _ (invoke "autoreconf" "--install")))
-		     (add-after 'autoreconf 'automake
+         (add-after 'autoreconf 'automake
            (lambda _ (invoke "automake"
                              "-c" "--foreign" "--add-missing")))
-		     (add-after 'automake 'autoconf
+         (add-after 'automake 'autoconf
            (lambda _ (invoke "autoconf"))))))
     (native-inputs
      `(("autoconf" ,autoconf)
