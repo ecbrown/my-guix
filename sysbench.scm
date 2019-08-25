@@ -82,4 +82,3 @@ benchmarks, but can also be used to create arbitrarily complex
 workloads that do not involve a database server.")
     (license license:gpl2+)))
 
-sysbench
