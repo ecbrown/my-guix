@@ -18,7 +18,7 @@
 
 ; Builds, but breaks with Segmentation Fault
 
-(define-module (nextcloud-client)
+(define-module (nextcloud-client-qtwebengine)
   #:use-module ((guix licenses) #:prefix license:)
   #:use-module (guix packages)
   #:use-module (guix download)
@@ -437,5 +437,3 @@ configure more computers to synchronize to the same server and any
 change to the files on one computer will silently and reliably flow
 across to every other.")
     (license license:gpl2+)))
-
-nextcloud-client

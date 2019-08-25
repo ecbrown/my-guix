@@ -111,5 +111,3 @@ configure more computers to synchronize to the same server and any
 change to the files on one computer will silently and reliably flow
 across to every other.")
     (license license:gpl2+)))
-
-nextcloud-client
