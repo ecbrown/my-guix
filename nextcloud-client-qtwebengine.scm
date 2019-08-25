@@ -360,7 +360,7 @@
     ;; Qt 5: assembler error; see <http://hydra.gnu.org/build/112526>.
     (supported-systems (delete "mips64el-linux" %supported-systems))))
 
-(define-public nextcloud-client
+(define-public nextcloud-client-qtwebengine
   (package
     (name "nextcloud-client")
     (version "2.5.3")
