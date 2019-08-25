@@ -362,7 +362,7 @@
 
 (define-public nextcloud-client-qtwebengine
   (package
-    (name "nextcloud-client")
+    (name "nextcloud-client-qtwebengine")
     (version "2.5.3")
     (source
      (origin
