@@ -34,56 +34,56 @@
 
 (define-public sysbench
   (package
-   (name "sysbench")
-   (version "1.0.17")
-   (source
-    (origin
-     (method git-fetch)
-     (uri (git-reference
-	   (url "https://github.com/akopytov/sysbench")
-	   (commit version)))
-     (file-name (git-file-name name version))
-     (sha256
-      (base32 "02i9knvp0bjw6ri848xxiy2dbww2xv70nah9yn67a6zgw617hwa6"))
-     (modules '((guix build utils)))))
-   (build-system gnu-build-system)
-   (arguments
-    `(#:tests? #f ; until shebangs fixed
-      #:configure-flags '("--with-system-luajit") 
-      #:phases
-      (modify-phases %standard-phases
+    (name "sysbench")
+    (version "1.0.17")
+    (source
+     (origin
+       (method git-fetch)
+       (uri (git-reference
+             (url "https://github.com/akopytov/sysbench")
+             (commit version)))
+       (file-name (git-file-name name version))
+       (sha256
+        (base32 "02i9knvp0bjw6ri848xxiy2dbww2xv70nah9yn67a6zgw617hwa6"))
+       (modules '((guix build utils)))))
+    (build-system gnu-build-system)
+    (arguments
+     `(#:tests? #f ; until shebangs fixed
+       #:configure-flags '("--with-system-luajit")
+       #:phases
+       (modify-phases %standard-phases
 		     (delete 'bootstrap)
 		     (add-after 'patch-source-shebangs 'libtoolize
-				(lambda _ (invoke "libtoolize" "--copy" "--force")))
+           (lambda _ (invoke "libtoolize" "--copy" "--force")))
 		     (add-after 'libtoolize 'aclocal
-				(lambda _ (invoke "aclocal" "-I" "m4")))
+           (lambda _ (invoke "aclocal" "-I" "m4")))
 		     (add-after 'aclocal 'autoreconf
-				(lambda _ (invoke "autoreconf" "--install")))
+           (lambda _ (invoke "autoreconf" "--install")))
 		     (add-after 'autoreconf 'automake
-				(lambda _ (invoke "automake"
-						  "-c" "--foreign" "--add-missing")))
+           (lambda _ (invoke "automake"
+                             "-c" "--foreign" "--add-missing")))
 		     (add-after 'automake 'autoconf
-				(lambda _ (invoke "autoconf"))))))
-   (native-inputs
-    `(("autoconf" ,autoconf)
-      ("automake" ,automake)
-      ("libtool" ,libtool)
-      ("lua" ,lua)
-      ("m4" ,m4)
-      ("perl" ,perl)
-      ("pkg-config" ,pkg-config)
-      ("python" ,python-minimal)))
-   (inputs
-    `(("libaio" ,libaio)
-      ("luajit" ,luajit)
-      ("mariadb" ,mariadb)
-      ("openssl" ,openssl)
-      ("postgresql" ,postgresql)
-      ("zlib" ,zlib)))
-   (home-page "https://github.com/akopytov/sysbench/")
-   (synopsis "Scriptable multi-threaded benchmark tool ")
-   (description "sysbench is a scriptable multi-threaded benchmark
-tool based on LuaJIT.  It is most frequently used for database
-benchmarks, but can also be used to create arbitrarily complex
-workloads that do not involve a database server.")
-   (license license:gpl2+)))
+           (lambda _ (invoke "autoconf"))))))
+    (native-inputs
+     `(("autoconf" ,autoconf)
+       ("automake" ,automake)
+       ("libtool" ,libtool)
+       ("lua" ,lua)
+       ("m4" ,m4)
+       ("perl" ,perl)
+       ("pkg-config" ,pkg-config)
+       ("python" ,python-minimal)))
+    (inputs
+     `(("libaio" ,libaio)
+       ("luajit" ,luajit)
+       ("mariadb" ,mariadb)
+       ("openssl" ,openssl)
+       ("postgresql" ,postgresql)
+       ("zlib" ,zlib)))
+    (home-page "https://github.com/akopytov/sysbench/")
+    (synopsis "Scriptable multi-threaded benchmark tool ")
+    (description "sysbench is a scriptable multi-threaded benchmark tool based
+on LuaJIT. It is most frequently used for database benchmarks, but can also be
+used to create arbitrarily complex workloads that do not involve a database
+server.")
+    (license license:gpl2+)))
