@@ -15,19 +15,28 @@
 ;;; You should have received a copy of the GNU General Public License
 ;;; along with GNU Guix.  If not, see <http://www.gnu.org/licenses/>.
 
+;; Broken: unable to find folks
+
 (define-module (geary)
   #:use-module (gnu packages)
+  #:use-module (gnu packages cmake)
   #:use-module (gnu packages compression)
-  #:use-module (gnu packages sqlite)
+  #:use-module (gnu packages enchant)
   #:use-module (gnu packages gnome)
   #:use-module (gnu packages gtk)
+  #:use-module (gnu packages mail)
   #:use-module (gnu packages pkg-config)
-  #:use-modeul (gnu packages readline)
+  #:use-module (gnu packages readline)
+  #:use-module (gnu packages sqlite)
   #:use-module (gnu packages tls)
   #:use-module (gnu packages webkit)
-  #:use-module ((guix licenses) #:select (lgpl2.1))
+  #:use-module ((guix licenses) #:select (lgpl2.1 public-domain))
   #:use-module (guix packages)
   #:use-module (guix download)
+  #:use-module (guix utils)
+  #:use-module (ice-9 match)
+  #:use-module (srfi srfi-26)
+  #:use-module (guix build-system gnu)
   #:use-module (guix build-system meson))
 
 (define-public sqlite-fts3
@@ -69,32 +78,33 @@
 zero-configuration, transactional SQL database engine.  SQLite is the most
 widely deployed SQL database engine in the world.  The source code for SQLite
 is in the public domain.")
-   (license license:public-domain)))
+   (license public-domain)))
 
 (define-public geary
   (package
     (name "geary")
     (version "3.33.1")
-    (source (origin
-              (method url-fetch)
-              (uri (string-append "mirror://gnome/sources/" name "/"
-                                  (version-major+minor version) "/"
-                                  name "-" version ".tar.xz"))
-              (sha256
-               (base32
-                "0jmprv2vpggzhy7ma4ynmv1jzn3pfiwzkld0kkg6hvgvqs44xlfr"))))
+    (source
+     (origin
+       (method url-fetch)
+       (uri (string-append "mirror://gnome/sources/" name "/"
+                           (version-major+minor version) "/"
+                           name "-" version ".tar.xz"))
+       (sha256
+        (base32
+         "1nlgrh8brjml17qb60pgqmk9811sxswgiw85iqygs45fbbgh0gmb"))))
     (build-system meson-build-system)
     (native-inputs
-     `(
-       ("pkg-config" ,pkg-config)
-       ))
+     `(("cmake" ,cmake)
+       ("pkg-config" ,pkg-config)))
     (inputs
-     `(
+     `(("enchant" ,enchant)
+       ("folks" ,folks)
+       ("gmime-2.6" ,gmime-2.6)
        ("gtk+" ,gtk+)
        ("sqlite" ,sqlite-fts3)
        ("vala" ,vala)
-       ("webkitgtk" ,webkitgtk)
-       ))
+       ("webkitgtk" ,webkitgtk)))
     (home-page "https://wiki.gnome.org/Apps/Geary/")
     (synopsis "Mail application built around conversations")
     (description "Geary is an email application built around conversations, for the GNOME 3 desktop. It allows you to read, find and send email with a
