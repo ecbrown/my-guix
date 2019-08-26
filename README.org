@@ -1,6 +1,7 @@
-Here are a few of my favorite packages for Guix, that are either in development,
-or have not yet met the quality requirements of Guix upstream.
+Here are a few of my favorite packages for Guix that are either in development,
+and/or have not yet met the quality requirements of Guix upstream.
 
+USE AT YOUR OWN RISK
 
 The following work well enough on my system:
 
