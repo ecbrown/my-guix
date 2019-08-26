@@ -22,6 +22,7 @@
   #:use-module (gnu packages gnome)
   #:use-module (gnu packages gtk)
   #:use-module (gnu packages pkg-config)
+  #:use-modeul (gnu packages readline)
   #:use-module (gnu packages tls)
   #:use-module (gnu packages webkit)
   #:use-module ((guix licenses) #:select (lgpl2.1))
