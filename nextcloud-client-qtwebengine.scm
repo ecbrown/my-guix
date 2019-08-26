@@ -206,7 +206,7 @@
        ("vulkan-headers" ,vulkan-headers)
        ("which" ,(@ (gnu packages base) which))))
     (arguments
-     `(#:parallel-build? #f ; Triggers race condition in qtbase module on Hydra.
+     `(#:parallel-build? #t ; was #f: Triggers race condition in qtbase module on Hydra.
        #:phases
        (modify-phases %standard-phases
          (add-after 'configure 'patch-bin-sh
