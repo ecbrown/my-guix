@@ -77,7 +77,7 @@ is in the public domain.")
     (version "3.33.1")
     (source (origin
               (method url-fetch)
-              (uri (string-append "https://download.gnome.org/sources/geary/v3.33/"
+              (uri (string-append "https://download.gnome.org/sources/geary/3.33/"
                                   name "-" version ".tar.xz"))
               (sha256
                (base32
