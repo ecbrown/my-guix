@@ -8,6 +8,7 @@ The following work well enough on my system:
 - Spacemacs Theme (emacs-spacemacs-theme)
 - Sunrise Commander (emacs-sunrise-commander)
 - Sylpheed
+- Sysbench
 
 The following are broken for various reasons:
 - Geary (can't find folks)
