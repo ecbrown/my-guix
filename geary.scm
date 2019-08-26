@@ -30,7 +30,6 @@
   #:use-module (guix download)
   #:use-module (guix build-system meson))
 
-
 (define-public sqlite-fts3
   (package
    (name "sqlite")
@@ -72,14 +71,13 @@ widely deployed SQL database engine in the world.  The source code for SQLite
 is in the public domain.")
    (license license:public-domain)))
 
-
 (define-public geary
   (package
     (name "geary")
     (version "3.33.1")
     (source (origin
               (method url-fetch)
-              (uri (string-append "https://download.gnome.org/sources/v3.33/"
+              (uri (string-append "https://download.gnome.org/sources/geary/v3.33/"
                                   name "-" version ".tar.xz"))
               (sha256
                (base32
