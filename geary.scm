@@ -77,11 +77,12 @@ is in the public domain.")
     (version "3.33.1")
     (source (origin
               (method url-fetch)
-              (uri (string-append "https://download.gnome.org/sources/geary/3.33/"
+              (uri (string-append "mirror://gnome/sources/" name "/"
+                                  (version-major+minor version) "/"
                                   name "-" version ".tar.xz"))
               (sha256
                (base32
-                "0j9y5vdzch251s264diw9clrn88dn20bqqkwfmis9l7m8vmwasqd"))))
+                "0jmprv2vpggzhy7ma4ynmv1jzn3pfiwzkld0kkg6hvgvqs44xlfr"))))
     (build-system meson-build-system)
     (native-inputs
      `(
