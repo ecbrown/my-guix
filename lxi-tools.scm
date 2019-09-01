@@ -32,10 +32,12 @@
      `(("autoconf" ,autoconf)
        ("automake" ,automake)
        ("gettext" ,gettext-minimal)
+       ("lua" ,lua)
        ("pkg-config" ,pkg-config)))
     (inputs
      `(("avahi" ,avahi)
-       ("libxml2" ,libxml2)))
+       ("libxml2" ,libxml2)
+       ("lua" ,lua)))
     (synopsis "Library for communication with LXI compatible devices")
     (description
      "liblxi is an open source software library which offers a simple API for
