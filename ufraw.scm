@@ -34,8 +34,8 @@
     (source (origin
              (method url-fetch)
              (uri (list
-                   (string-append "mirror://sourceforge/ufraw/ufraw/"
-                                  version "/ufraw-" version ".tar.gz")))
+                   (string-append "mirror://sourceforge/ufraw/files/ufraw/"
+                                  name "-" version "/ufraw-" version ".tar.gz")))
              (sha256
               (base32
                "06bdnhb0l81srdzg6gn2v2ydhhaazza7rshrcj3q8dpqr3gn97dd"))))
