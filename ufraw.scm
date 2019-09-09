@@ -38,7 +38,7 @@
                                   name "-" version "/ufraw-" version ".tar.gz")))
              (sha256
               (base32
-               "06bdnhb0l81srdzg6gn2v2ydhhaazza7rshrcj3q8dpqr3gn97dd"))))
+               "0pm216pg0vr44gwz9vcvq3fsf8r5iayljhf5nis2mnw7wn6d5azp"))))
     (build-system gnu-build-system)
     (native-inputs
      `(("autoconf" ,autoconf)
