@@ -49,10 +49,11 @@
     (version "1.0-beta1")
     (source (origin
               (method url-fetch)
-              (uri (string-append "https://media.inkscape.org/dl/"
-                                  "resources/file/"
-                                  "inkscape-" version ".tar.bz2"))
-              (sha256
+;              (uri (string-append "https://media.inkscape.org/dl/"
+;                                  "resources/file/"
+;                                  "inkscape-" version ".tar.bz2"))
+              (uri "https://inkscape.org/gallery/item/14917/inkscape-1.0beta1.tar.bz2") 
+	      (sha256
                (base32
                 "0pjinhjibfsz1aywdpgpj3k23xrsszpj4a1ya5562dkv2yl2vv2p"))))
     (build-system cmake-build-system)
