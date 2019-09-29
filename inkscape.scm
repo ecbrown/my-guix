@@ -55,7 +55,7 @@
               (uri "https://inkscape.org/gallery/item/14917/inkscape-1.0beta1.tar.bz2") 
 	      (sha256
                (base32
-                "0pjinhjibfsz1aywdpgpj3k23xrsszpj4a1ya5562dkv2yl2vv2p"))))
+                "1dp0dfpwi0sdcaz784xhwrx3yv3j8jcc4ds9nf11i22alk779wqz"))))
     (build-system cmake-build-system)
     (inputs
      `(("aspell" ,aspell)
