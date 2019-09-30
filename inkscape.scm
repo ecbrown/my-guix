@@ -31,6 +31,7 @@
   #:use-module (gnu packages bdw-gc)
   #:use-module (gnu packages boost)
   #:use-module (gnu packages glib)
+  #:use-module (gnu packages gnome)
   #:use-module (gnu packages gtk)
   #:use-module (gnu packages maths)
   #:use-module (gnu packages perl)
