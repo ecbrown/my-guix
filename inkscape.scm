@@ -61,6 +61,7 @@
     (build-system cmake-build-system)
     (inputs
      `(("aspell" ,aspell)
+       ("gdl" ,gdl)
        ("gtkmm" ,gtkmm)
        ("gtk" ,gtk+)
        ("gsl" ,gsl)
