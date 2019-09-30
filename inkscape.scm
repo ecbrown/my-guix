@@ -65,6 +65,7 @@
        ("gtk" ,gtk+-2)
        ("gsl" ,gsl)
        ("poppler" ,poppler)
+       ("jpeg" ,jpeg)
        ("libsoup" ,libsoup)
        ("libpng" ,libpng)
        ("libxml2" ,libxml2)
