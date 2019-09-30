@@ -33,7 +33,7 @@
   #:use-module (gnu packages glib)
   #:use-module (gnu packages gnome)
   #:use-module (gnu packages gtk)
-  #:use-module (gnu packages kde-framework)
+  #:use-module (gnu packages kde-frameworks)
   #:use-module (gnu packages maths)
   #:use-module (gnu packages perl)
   #:use-module (gnu packages pdf)
