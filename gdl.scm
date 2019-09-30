@@ -48,7 +48,7 @@
        (file-name (git-file-name name version))
        (sha256
         (base32 "02q9fyxicaisrqy2sgrnrxfq3pbrc2k95krx5yrc9ca4p6f85kgn"))
-       (modules '((guix build utils)))
+       (modules '((guix build utils)))))
     (build-system cmake-build-system)
     (native-inputs
      `(
