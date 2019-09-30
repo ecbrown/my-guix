@@ -77,6 +77,7 @@
        ("boost" ,boost)))
     (native-inputs
      `(("intltool" ,intltool)
+       ("extra-cmake-modules" ,extra-cmake-modules)
        ("glib" ,glib "bin")
        ("perl" ,perl)
        ("pkg-config" ,pkg-config)))
