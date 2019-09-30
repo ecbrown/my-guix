@@ -61,8 +61,8 @@
     (build-system cmake-build-system)
     (inputs
      `(("aspell" ,aspell)
-       ("gtkmm" ,gtkmm-3)
-       ("gtk" ,gtk+-3)
+       ("gtkmm" ,gtkmm)
+       ("gtk" ,gtk+)
        ("gsl" ,gsl)
        ("poppler" ,poppler)
        ("libjpeg" ,libjpeg)
