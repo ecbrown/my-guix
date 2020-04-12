@@ -26,7 +26,8 @@
   #:use-module (guix git-download)
   #:use-module (guix packages)
   #:use-module (gnu packages)
-  #:use-module (gnu packages statistics))
+  #:use-module (gnu packages statistics)
+  #:use-module (gnu packages compression))
 
 (define-public r-rserve
   (package
