@@ -27,7 +27,8 @@
   #:use-module (guix packages)
   #:use-module (gnu packages)
   #:use-module (gnu packages statistics)
-  #:use-module (gnu packages compression))
+  #:use-module (gnu packages compression)
+  #:use-module (gnu packages tls))
 
 (define-public r-rserve
   (package
