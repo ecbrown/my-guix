@@ -44,7 +44,7 @@
              (commit version)))
        (file-name (git-file-name name version))
        (sha256
-        (base32 "02i9knvp0bjw6ri848xxiy2dbww2xv70nah9yn67a6zgw617hwa6"))
+        (base32 "1zgqb9cr7ld3vw4a3jhq1mlszhcyjlpr0c8q1jcp1d27l9dcvd1w"))
        (modules '((guix build utils)))))
     (build-system gnu-build-system)
     (arguments
