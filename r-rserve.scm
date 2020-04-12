@@ -74,7 +74,7 @@ well.")
        (method url-fetch)
        (uri (cran-uri "RestRserve" version))
        (sha256
-        (base32 "19knh1sw0icw6jh9wfb2hq5jf49i2qfvp9myvqm5paa495689x9q"))))
+        (base32 "1b8wbar98qhhl46s4i7qks5nm2wy5bvfi9029gpd4gmqsq4bmbm7"))))
     (build-system r-build-system)
     (propagated-inputs
      `(("r-rserve" ,r-rserve)
