@@ -35,7 +35,7 @@
 (define-public sysbench
   (package
     (name "sysbench")
-    (version "1.0.17")
+    (version "1.0.19")
     (source
      (origin
        (method git-fetch)
