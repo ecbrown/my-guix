@@ -71,7 +71,7 @@ well.")
     (source
      (origin
        (method url-fetch)
-       (uri "https://github.com/rexyai/RestRserve/archive/RestRserve-0.2.2.tar.gz")
+       (uri "https://github.com/rexyai/RestRserve/archive/v0.2.2.tar.gz")
        ;(uri "http://www.rforge.net/Rserve/snapshot/Rserve_1.8-4.tar.gz")
        (sha256
         (base32
