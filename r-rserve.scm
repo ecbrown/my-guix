@@ -28,6 +28,7 @@
   #:use-module (gnu packages)
   #:use-module (gnu packages statistics)
   #:use-module (gnu packages compression)
+  #:use-module (gnu packages cran)
   #:use-module (gnu packages tls))
 
 
