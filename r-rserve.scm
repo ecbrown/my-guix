@@ -78,7 +78,7 @@ well.")
     (build-system r-build-system)
     (propagated-inputs
      `(("r-rserve" ,r-rserve)
-       )))
+       ))
 ;    (native-inputs `(("gfortran" ,gfortran)))
     (home-page "http://biostat.mc.vanderbilt.edu/rms")
     (synopsis "Regression modeling strategies")
