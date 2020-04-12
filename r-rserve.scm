@@ -30,6 +30,8 @@
   #:use-module (gnu packages compression)
   #:use-module (gnu packages tls))
 
+
+
 (define-public r-rserve
   (package
     (name "r-rserve")
@@ -61,3 +63,29 @@ R code. Rserve supports remote connection, user authentication and
 file transfer. A simple R client is included in this package as
 well.")
     (license license:gpl2)))
+
+(define-public r-restrserve
+  (package
+    (name "r-restrserve")
+    (version "0.2.2")
+    (source
+     (origin
+       (method url-fetch)
+       (uri "https://github.com/rexyai/RestRserve/archive/RestRserve-0.2.2.tar.gz")
+       ;(uri "http://www.rforge.net/Rserve/snapshot/Rserve_1.8-4.tar.gz")
+       (sha256
+        (base32
+         ;"1dncwiyhy1s1pimb6f2dzs3ivahah5id3chw4r10j92754bxmrn2"
+         "0ayriwzwdx78357f8nvyq65idjz91szhhcg1hmyqv74i6l3x8nk0"))))
+    (propagated-inputs
+     `(("r" ,r)))
+    (inputs `(("zlib" ,zlib)
+              ("openssl" ,openssl)))
+
+    (build-system r-build-system)
+    (home-page "https://github.com/rexyai/RestRserve")
+    (synopsis "RestRserve")
+    (description
+      "RestRserve")
+    (license license:gpl2)))
+
