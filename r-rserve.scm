@@ -64,6 +64,7 @@ file transfer. A simple R client is included in this package as
 well.")
     (license license:gpl2)))
 
+
 (define-public r-restrserve
   (package
     (name "r-restrserve")
@@ -71,21 +72,29 @@ well.")
     (source
      (origin
        (method url-fetch)
-       (uri "https://github.com/rexyai/RestRserve/archive/v0.2.2.tar.gz")
-       ;(uri "http://www.rforge.net/Rserve/snapshot/Rserve_1.8-4.tar.gz")
+       (uri (cran-uri "RestRserve" version))
        (sha256
-        (base32
-         ;"1dncwiyhy1s1pimb6f2dzs3ivahah5id3chw4r10j92754bxmrn2"
-         "0ayriwzwdx78357f8nvyq65idjz91szhhcg1hmyqv74i6l3x8nk0"))))
-    (propagated-inputs
-     `(("r" ,r)))
-    (inputs `(("zlib" ,zlib)
-              ("openssl" ,openssl)))
-
+        (base32 "19knh1sw0icw6jh9wfb2hq5jf49i2qfvp9myvqm5paa495689x9q"))))
     (build-system r-build-system)
-    (home-page "https://github.com/rexyai/RestRserve")
-    (synopsis "RestRserve")
+    (propagated-inputs
+     `(("r-rserve" ,r-rserve)
+       )))
+;    (native-inputs `(("gfortran" ,gfortran)))
+    (home-page "http://biostat.mc.vanderbilt.edu/rms")
+    (synopsis "Regression modeling strategies")
     (description
-      "RestRserve")
-    (license license:gpl2)))
+     "This is a package for regression modeling, testing, estimation,
+validation, graphics, prediction, and typesetting by storing enhanced model
+design attributes in the fit.  The rms package is a collection of functions
+that assist with and streamline modeling.  It also contains functions for
+binary and ordinal logistic regression models, ordinal models for continuous Y
+with a variety of distribution families, and the Buckley-James multiple
+regression model for right-censored responses, and implements penalized
+maximum likelihood estimation for logistic and ordinary linear models.  The
+package works with almost any regression model, but it was especially written
+to work with binary or ordinal regression models, Cox regression, accelerated
+failure time models, ordinary linear models, the Buckley-James model,
+generalized least squares for serially or spatially correlated observations,
+generalized linear models, and quantile regression.")
+    (license license:gpl2+)))
 
