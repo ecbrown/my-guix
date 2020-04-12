@@ -46,7 +46,14 @@
          ;"1dncwiyhy1s1pimb6f2dzs3ivahah5id3chw4r10j92754bxmrn2"
          "0ayriwzwdx78357f8nvyq65idjz91szhhcg1hmyqv74i6l3x8nk0"))))
     (propagated-inputs
-     `(("r" ,r)))
+     `(("r" ,r)
+       ("r-rcpp" ,r-rcpp)
+       ("r-r6" ,r-r6)
+       ("r-uuid" ,r-uuid)
+       ("r-checkmate" ,r-checkmate)
+       ("r-mime" ,r-mime)
+       ("r-jsonlite" ,r-jsonlite)
+))
     (inputs `(("zlib" ,zlib)
               ("openssl" ,openssl)))
 
