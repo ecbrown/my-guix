@@ -54,6 +54,7 @@
        ("r-checkmate" ,r-checkmate)
        ("r-mime" ,r-mime)
        ("r-jsonlite" ,r-jsonlite)
+       ("r-knitr" ,r-knitr)
 ))
     (inputs `(("zlib" ,zlib)
               ("openssl" ,openssl)))
