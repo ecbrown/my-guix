@@ -36,12 +36,12 @@
 (define-public r-rserve
   (package
     (name "r-rserve")
-    (version "1.8-4")
+    (version "1.8-6")
     (source
      (origin
        (method url-fetch)
-       ;(uri "https://github.com/s-u/Rserve/releases/download/1.8-4/Rserve_1.8-4.tar.gz")
-       (uri "http://www.rforge.net/Rserve/snapshot/Rserve_1.8-4.tar.gz")
+       ;(uri "https://github.com/s-u/Rserve/releases/download/1.8-6/Rserve_1.8-6.tar.gz")
+       (uri "http://www.rforge.net/Rserve/snapshot/Rserve_1.8-6.tar.gz")
        (sha256
         (base32
          ;"1dncwiyhy1s1pimb6f2dzs3ivahah5id3chw4r10j92754bxmrn2"
