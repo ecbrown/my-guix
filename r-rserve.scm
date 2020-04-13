@@ -79,10 +79,12 @@ well.")
         (base32 "1b8wbar98qhhl46s4i7qks5nm2wy5bvfi9029gpd4gmqsq4bmbm7"))))
     (build-system r-build-system)
     (propagated-inputs
-     `(("r-rserve" ,r-rserve)
-       ))
+     `(("r-rserve" ,r-rserve)))
     (home-page "https://restrserve.org")
-    (synopsis "RestRserve")
+    (synopsis "R web API framework")
     (description
-     "RestRserve")
+     "RestRserve is an R web API framework for building high-performance AND
+robust microservices and app backends. With Rserve backend on UNIX-like systems
+it is parallel by design. It will handle incoming requests in parallel - each
+request in a separate fork.")
     (license license:gpl2+)))
