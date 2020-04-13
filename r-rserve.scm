@@ -31,8 +31,6 @@
   #:use-module (gnu packages cran)
   #:use-module (gnu packages tls))
 
-
-
 (define-public r-rserve
   (package
     (name "r-rserve")
@@ -40,11 +38,9 @@
     (source
      (origin
        (method url-fetch)
-       ;(uri "https://github.com/s-u/Rserve/releases/download/1.8-6/Rserve_1.8-6.tar.gz")
        (uri "http://www.rforge.net/Rserve/snapshot/Rserve_1.8-6.tar.gz")
        (sha256
         (base32
-         ;"1dncwiyhy1s1pimb6f2dzs3ivahah5id3chw4r10j92754bxmrn2"
          "1imz78wa9rphz9ly1wbz4ahdlzcc9hcfbfgdd2pbnpmipbrpg233"))))
     (propagated-inputs
      `(("r" ,r)
@@ -54,11 +50,9 @@
        ("r-checkmate" ,r-checkmate)
        ("r-mime" ,r-mime)
        ("r-jsonlite" ,r-jsonlite)
-       ("r-knitr" ,r-knitr)
-))
+       ("r-knitr" ,r-knitr)))
     (inputs `(("zlib" ,zlib)
               ("openssl" ,openssl)))
-
     (build-system r-build-system)
     (home-page "https://github.com/s-u/Rserve")
     (synopsis "Fast, flexible and powerful server providing access to R from many languages and systems http://RForge.net/Rserve")
@@ -72,7 +66,6 @@ R code. Rserve supports remote connection, user authentication and
 file transfer. A simple R client is included in this package as
 well.")
     (license license:gpl2)))
-
 
 (define-public r-restrserve
   (package
@@ -88,22 +81,8 @@ well.")
     (propagated-inputs
      `(("r-rserve" ,r-rserve)
        ))
-;    (native-inputs `(("gfortran" ,gfortran)))
-    (home-page "http://biostat.mc.vanderbilt.edu/rms")
-    (synopsis "Regression modeling strategies")
+    (home-page "https://restrserve.org")
+    (synopsis "RestRserve")
     (description
-     "This is a package for regression modeling, testing, estimation,
-validation, graphics, prediction, and typesetting by storing enhanced model
-design attributes in the fit.  The rms package is a collection of functions
-that assist with and streamline modeling.  It also contains functions for
-binary and ordinal logistic regression models, ordinal models for continuous Y
-with a variety of distribution families, and the Buckley-James multiple
-regression model for right-censored responses, and implements penalized
-maximum likelihood estimation for logistic and ordinary linear models.  The
-package works with almost any regression model, but it was especially written
-to work with binary or ordinal regression models, Cox regression, accelerated
-failure time models, ordinary linear models, the Buckley-James model,
-generalized least squares for serially or spatially correlated observations,
-generalized linear models, and quantile regression.")
+     "RestRserve")
     (license license:gpl2+)))
-
