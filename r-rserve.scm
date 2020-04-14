@@ -79,8 +79,7 @@ well.")
         (base32 "1b8wbar98qhhl46s4i7qks5nm2wy5bvfi9029gpd4gmqsq4bmbm7"))))
     (build-system r-build-system)
     (propagated-inputs
-     `(("predict" ,(local-file "~/src/my-src/src.R"))
-       ("r-rserve" ,r-rserve)))
+     `(("r-rserve" ,r-rserve)))
     (home-page "https://restrserve.org")
     (synopsis "R web API framework")
     (description
