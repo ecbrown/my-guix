@@ -49,7 +49,7 @@
     (build-system gnu-build-system)
     (arguments
      `(#:tests? #f ; until shebangs fixed
-       #:configure-flags '("--with-system-luajit" "--without-mysql")
+       #:configure-flags '("--with-system-luajit")
        #:phases
        (modify-phases %standard-phases
          (delete 'bootstrap)
@@ -76,7 +76,7 @@
     (inputs
      `(("libaio" ,libaio)
        ("luajit" ,luajit)
-       ;("mariadb" ,mariadb)
+       ("mysql" ,mysql)
        ("openssl" ,openssl)
        ("postgresql" ,postgresql)
        ("zlib" ,zlib)))
