@@ -154,3 +154,32 @@ request in a separate fork.")
     "R interface for 'H2O', the scalable open source machine learning platform that offers parallelized implementations of many supervised and unsupervised machine learning algorithms such as Generalized Linear Models, Gradient Boosting Machines (including XGBoost), Random Forests, Deep Neural Networks (Deep Learning), Stacked Ensembles, Naive Bayes, Cox Proportional Hazards, K-Means, PCA, Word2Vec, as well as a fully automatic machine learning algorithm (AutoML).")
   (license #f)))
 
+(define-public r-bridgesampling
+(package
+  (name "r-bridgesampling")
+  (version "1.0-0")
+  (source
+    (origin
+      (method url-fetch)
+      (uri (cran-uri "bridgesampling" version))
+      (sha256
+        (base32
+          "1awhvv0v42w2q6llqi1wqpaiv5zx74cqzigdsvphy2jfp8ajw64y"))))
+  (properties
+    `((upstream-name . "bridgesampling")))
+  (build-system r-build-system)
+  (propagated-inputs
+    `(("r-brobdingnag" ,r-brobdingnag)
+      ("r-coda" ,r-coda)
+      ("r-matrix" ,r-matrix)
+      ("r-mvtnorm" ,r-mvtnorm)
+      ("r-scales" ,r-scales)
+      ("r-stringr" ,r-stringr)))
+  (native-inputs `(("r-knitr" ,r-knitr)))
+  (home-page
+    "https://github.com/quentingronau/bridgesampling")
+  (synopsis
+    "Bridge Sampling for Marginal Likelihoods and Bayes Factors")
+  (description
+    "This package provides functions for estimating marginal likelihoods, Bayes factors, posterior model probabilities, and normalizing constants in general, via different versions of bridge sampling (Meng & Wong, 1996, <http://www3.stat.sinica.edu.tw/statistica/j6n4/j6n43/j6n43.htm>).  Gronau, Singmann, & Wagenmakers (2020) <doi:10.18637/jss.v092.i10>.")
+  (license license:gpl2+)))
