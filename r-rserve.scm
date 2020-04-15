@@ -144,7 +144,7 @@ request in a separate fork.")
           "1xdhd0h0hncg7s5nsrb97arqiyd9r3cxv1in36lx7pyplxcfy4fb"))))
   (properties `((upstream-name . "h2o")))
   (build-system r-build-system)
-  (inputs `(("java" ,java)))
+  (inputs `(("java" ,icedtea)))
   (propagated-inputs
     `(("r-jsonlite" ,r-jsonlite) ("r-rcurl" ,r-rcurl)))
   (home-page "https://github.com/h2oai/h2o-3")
