@@ -29,6 +29,7 @@
   #:use-module (gnu packages statistics)
   #:use-module (gnu packages compression)
   #:use-module (gnu packages cran)
+  #:use-module (gnu packages java)
   #:use-module (gnu packages tls))
 
 (define-public r-rserve
