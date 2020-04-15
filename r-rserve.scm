@@ -1,4 +1,4 @@
-;;; Copyright © 2019 Eric Brown <brown@fastmail.com>
+;;; Copyright © 2020 Eric Brown <ecbrown@ericcbrown.com>
 ;;;
 ;;; This file is part of GNU Guix.
 ;;;
