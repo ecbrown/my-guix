@@ -88,3 +88,68 @@ robust microservices and app backends. With Rserve backend on UNIX-like systems
 it is parallel by design. It will handle incoming requests in parallel - each
 request in a separate fork.")
     (license license:gpl2+)))
+
+(define-public r-brms
+(package
+  (name "r-brms")
+  (version "2.12.0")
+  (source
+    (origin
+      (method url-fetch)
+      (uri (cran-uri "brms" version))
+      (sha256
+        (base32
+          "1699lwkklfhjz7fddawlig552g2zvrc34mqwrzqjgl35r9fm08gs"))))
+  (properties `((upstream-name . "brms")))
+  (build-system r-build-system)
+  (propagated-inputs
+    `(("r-abind" ,r-abind)
+      ("r-backports" ,r-backports)
+      ("r-bayesplot" ,r-bayesplot)
+      ("r-bridgesampling" ,r-bridgesampling)
+      ("r-coda" ,r-coda)
+      ("r-future" ,r-future)
+      ("r-ggplot2" ,r-ggplot2)
+      ("r-glue" ,r-glue)
+      ("r-loo" ,r-loo)
+      ("r-matrix" ,r-matrix)
+      ("r-matrixstats" ,r-matrixstats)
+      ("r-mgcv" ,r-mgcv)
+      ("r-nleqslv" ,r-nleqslv)
+      ("r-nlme" ,r-nlme)
+      ("r-rcpp" ,r-rcpp)
+      ("r-rstan" ,r-rstan)
+      ("r-rstantools" ,r-rstantools)
+      ("r-shinystan" ,r-shinystan)))
+  (native-inputs `(("r-knitr" ,r-knitr)))
+  (home-page
+    "https://github.com/paul-buerkner/brms")
+  (synopsis
+    "Bayesian Regression Models using 'Stan'")
+  (description
+    "Fit Bayesian generalized (non-)linear multivariate multilevel models using 'Stan' for full Bayesian inference.  A wide range of distributions and link functions are supported, allowing users to fit -- among others -- linear, robust linear, count data, survival, response times, ordinal, zero-inflated, hurdle, and even self-defined mixture models all in a multilevel context.  Further modeling options include non-linear and smooth terms, auto-correlation structures, censored data, meta-analytic standard errors, and quite a few more.  In addition, all parameters of the response distribution can be predicted in order to perform distributional regression.  Prior specifications are flexible and explicitly encourage users to apply prior distributions that actually reflect their beliefs.  Model fit can easily be assessed and compared with posterior predictive checks and leave-one-out cross-validation.  References: BÃ¼rkner (2017) <doi:10.18637/jss.v080.i01>; BÃ¼rkner (2018) <doi:10.32614/RJ-2018-017>; Carpenter et al. (2017) <doi:10.18637/jss.v076.i01>.")
+  (license gpl2)))
+
+(define-public r-h2o
+(package
+  (name "r-h2o")
+  (version "3.30.0.1")
+  (source
+    (origin
+      (method url-fetch)
+      (uri (cran-uri "h2o" version))
+      (sha256
+        (base32
+          "1xdhd0h0hncg7s5nsrb97arqiyd9r3cxv1in36lx7pyplxcfy4fb"))))
+  (properties `((upstream-name . "h2o")))
+  (build-system r-build-system)
+  (inputs `(("java" ,java)))
+  (propagated-inputs
+    `(("r-jsonlite" ,r-jsonlite) ("r-rcurl" ,r-rcurl)))
+  (home-page "https://github.com/h2oai/h2o-3")
+  (synopsis
+    "R Interface for the 'H2O' Scalable Machine Learning Platform")
+  (description
+    "R interface for 'H2O', the scalable open source machine learning platform that offers parallelized implementations of many supervised and unsupervised machine learning algorithms such as Generalized Linear Models, Gradient Boosting Machines (including XGBoost), Random Forests, Deep Neural Networks (Deep Learning), Stacked Ensembles, Naive Bayes, Cox Proportional Hazards, K-Means, PCA, Word2Vec, as well as a fully automatic machine learning algorithm (AutoML).")
+  (license #f)))
+
