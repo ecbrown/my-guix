@@ -5,5 +5,5 @@ USE AT YOUR OWN RISK
 
 The following work well enough on my system:
 
-- Sysbench (sysbench)
+- Rserve (r-rserve)
 
