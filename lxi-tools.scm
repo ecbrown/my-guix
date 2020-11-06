@@ -32,7 +32,7 @@
      `(("autoconf" ,autoconf)
        ("automake" ,automake)
        ("gettext" ,gettext-minimal)
-       ("lua-5.3" ,lua-5.3)
+       ("lua" ,lua)
        ("pkg-config" ,pkg-config)))
     (inputs
      `(("avahi" ,avahi)
@@ -69,7 +69,7 @@ responses.")
      `(("autoconf" ,autoconf)
        ("automake" ,automake)
        ("gettext" ,gettext-minimal)
-       ("lua-5.3" ,lua)
+       ("lua" ,lua)
        ("pkg-config" ,pkg-config)))
     (inputs
      `(("avahi" ,avahi)
