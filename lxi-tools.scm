@@ -37,7 +37,7 @@
     (inputs
      `(("avahi" ,avahi)
        ("libxml2" ,libxml2)
-       ("lua-5.3" ,lua)))
+       ("lua" ,lua)))
     (synopsis "Library for communication with LXI compatible devices")
     (description
      "liblxi is an open source software library which offers a simple API for
@@ -74,7 +74,7 @@ responses.")
     (inputs
      `(("avahi" ,avahi)
        ("libxml2" ,libxml2)
-       ("lua-5.3" ,lua)
+       ("lua" ,lua)
        ("qtbase" ,qtbase)
        ("qtcharts" ,qtcharts)
        ("qwt" ,qwt)
