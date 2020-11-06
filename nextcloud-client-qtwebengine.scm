@@ -428,7 +428,7 @@
 ;       ("qtlinguist" ,qttools)
        ))
     (inputs
-     `(("openssl" ,openssl-next)
+     `(("openssl" ,openssl)
        ("qt" ,qt-qtwebengine)
 ;       ("qtbase" ,qtbase)
 ;       ("qtkeychain" ,qtkeychain)
