@@ -95,7 +95,7 @@
        ("qtlinguist" ,qttools)
        ))
     (inputs
-     `(("openssl" ,openssl-next)
+     `(("openssl" ,openssl)
        ("qtbase" ,qtbase)
        ("qtkeychain" ,qtkeychain)
 ;       ("qtwebview" ,qtwebview)
