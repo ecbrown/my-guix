@@ -93,7 +93,7 @@
 ;                                  version ".tar.gz"))
               (uri "https://gitlab.com/Molcas/OpenMolcas/-/archive/v21.02/OpenMolcas-v21.02.tar.gz")
               (sha256
-               (base32 "1m7njfjdb7sqf0lhgc4swihgdr4snkg8v02wcly08wb5ar2fr2s6"))))
+               (base32 "1k1vpdpx038k0m0fcbfq30q93jmz450yn40l1hj5jfizgyn8qnzs"))))
 ;    (source (origin
 ;     (method git-fetch)
 ;     (uri (git-reference
