@@ -108,7 +108,7 @@
        #:configure-flags
        (let ((out (assoc-ref %outputs "out")))
          (list "-DLINALG=OpenBLAS"
-               (string-append "-DOPENBLASROOT=" (assoc-ref inputs "openblas"))
+               (string-append "-DOPENBLASROOT=" (assoc-ref %inputs "openblas"))
                ;"-DCC=gcc"
                ;(string-append "-DCMAKE_INSTALL_SYSCONF_PREFIX=" out "/etc")
                ;(string-append "-DBASHCOMPLETIONDIR=" out "/etc/bash_completion.d"))
