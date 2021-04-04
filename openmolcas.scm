@@ -105,7 +105,7 @@
 	  (build-system cmake-build-system)
     (arguments
      `(#:configure-flags '("-DLINALG=OpenBLAS"
-                           (string-append "-DOPENBLASROOT=" (assoc-ref inputs "openblas")))
+                           (string-append "-DOPENBLASROOT=" (assoc-ref native-inputs "openblas")))
                          #:tests? #f))
 	 (inputs
 		`(("openblas" ,openblas-ilp64)
