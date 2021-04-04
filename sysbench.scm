@@ -35,7 +35,13 @@
 (define-public sysbench
   (package
     (name "sysbench")
+<<<<<<< HEAD
     (version "1.0.19")
+||||||| c27bda7
+    (version "1.0.17")
+=======
+    (version "1.0.20")
+>>>>>>> 66cee1ab2d1b6410584ee54cb9f33abf54353c4f
     (source
      (origin
        (method git-fetch)
@@ -44,7 +50,13 @@
              (commit version)))
        (file-name (git-file-name name version))
        (sha256
+<<<<<<< HEAD
         (base32 "1zgqb9cr7ld3vw4a3jhq1mlszhcyjlpr0c8q1jcp1d27l9dcvd1w"))
+||||||| c27bda7
+        (base32 "02i9knvp0bjw6ri848xxiy2dbww2xv70nah9yn67a6zgw617hwa6"))
+=======
+        (base32 "1sanvl2a52ff4shj62nw395zzgdgywplqvwip74ky8q7s6qjf5qy"))
+>>>>>>> 66cee1ab2d1b6410584ee54cb9f33abf54353c4f
        (modules '((guix build utils)))))
     (build-system gnu-build-system)
     (arguments
