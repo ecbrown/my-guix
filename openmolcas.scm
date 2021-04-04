@@ -108,7 +108,7 @@
 			("lapack" ,lapack)
       ))
 	 (native-inputs
-		`(;("python-pytest" ,python-pytest)
+		`(("python" ,python)
       ("openblas" ,openblas-ilp64)
 			("lapack" ,lapack)
 			("gfortran" ,gfortran)))
