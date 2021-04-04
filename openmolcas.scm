@@ -104,7 +104,7 @@
 ;      (base32 "1n6l91yyqjx0pz4w1lp3yybpq0fs2yjswfcm8c1wjfkxwiznbdxi"))))
 	  (build-system cmake-build-system)
         (arguments
-     '(#:tests? #f
+     `(#:tests? #f
        #:configure-flags
        (let ((out (assoc-ref %outputs "out")))
          (list "-DLINALG=OpenBLAS"
