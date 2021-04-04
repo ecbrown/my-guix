@@ -101,7 +101,7 @@
 			;("lapack" ,lapack)
       ))
 	 (native-inputs
-		`(("python-pytest" ,python-pytest)
+		`(;("python-pytest" ,python-pytest)
 			("gfortran" ,gfortran)))
 	 (home-page "https://www.openmolcas.org")
 	 (synopsis "OpenMOLCAS")
