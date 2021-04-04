@@ -103,6 +103,34 @@
 ;     (sha256
 ;      (base32 "1n6l91yyqjx0pz4w1lp3yybpq0fs2yjswfcm8c1wjfkxwiznbdxi"))))
 	  (build-system cmake-build-system)
+        (arguments
+     '(#:tests? #f
+       #:configure-flags
+       (let ((out (assoc-ref %outputs "out")))
+         (list "-DLINALG=OpenBLAS"
+               (string-append "-DOPENBLASROOT=" (assoc-ref (or inputs native-inputs) "openblas"))
+               ;"-DCC=gcc"
+               ;(string-append "-DCMAKE_INSTALL_SYSCONF_PREFIX=" out "/etc")
+               ;(string-append "-DBASHCOMPLETIONDIR=" out "/etc/bash_completion.d"))
+         )
+       ;#:phases
+       ;(modify-phases %standard-phases
+       ;  (add-after 'install 'install-xsession
+       ;    (lambda* (#:key outputs #:allow-other-keys)
+       ;      (let* ((out (assoc-ref outputs "out"))
+       ;             (xsessions (string-append out "/share/xsessions")))
+       ;        (mkdir-p xsessions)
+       ;        (call-with-output-file
+       ;            (string-append xsessions "/herbstluftwm.desktop")
+       ;          (lambda (port)
+       ;            (format port "~
+       ;              [Desktop Entry]~@
+       ;              Name=herbstluftwm~@
+       ;              Comment=Manual tiling window manager~@
+       ;              Exec=~a/bin/herbstluftwm~@
+       ;              Type=XSession~%" out)))
+       ;        #t))))
+       ))
     (arguments
      `(#:configure-flags (list
                           "-DLINALG=OpenBLAS"
