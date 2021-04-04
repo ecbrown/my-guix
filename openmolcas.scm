@@ -106,10 +106,32 @@
 			("lapack" ,lapack)
 			("gfortran" ,gfortran)))
    (arguments
-    '(#:configure-flags
+
+;    `(#:tests? #f
+;               #:configure-flags
+;               (list "-DBUILD_TESTING=OFF"
+;                     (string-append "-DCMAKE_CXX_FLAGS=-I"
+;                                    (assoc-ref %build-inputs "openexr")
+;                                    "/include/OpenEXR"))
+;               #:phases
+;               (modify-phases %standard-phases
+;                 ;; Ensure that icons are found at runtime.
+;                 ;; This works around <https://bugs.gnu.org/22138>.
+;                 (add-after 'install 'wrap-executable
+;                   (lambda* (#:key inputs outputs #:allow-other-keys)
+;                     (let ((out (assoc-ref outputs "out"))
+;                           (qt '("qtbase" "qtsvg")))
+;                       (wrap-program (string-append out "/bin/krita")
+;                         `("QT_PLUGIN_PATH" ":" prefix
+;                           ,(map (lambda (label)
+;                                   (string-append (assoc-ref inputs label)
+;                                                  "/lib/qt5/plugins/"))
+;                                 qt)))
+;                       #t))))))
+    `(#:configure-flags
       (list "-DLINALG=OpenBLAS"
             (string-append "-DOPENBLASDIR="
-                           (assoc-ref %inputs "openblas")))))
+                           (assoc-ref %build-inputs "openblas")))))
 	 (home-page "https://www.openmolcas.org")
 	 (synopsis "OpenMOLCAS")
 	 (description "OpenMOLCAS")
