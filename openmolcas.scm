@@ -101,6 +101,17 @@
 ;     (file-name (git-file-name name version))
 ;     (sha256
 ;      (base32 "1n6l91yyqjx0pz4w1lp3yybpq0fs2yjswfcm8c1wjfkxwiznbdxi"))))
+	 (inputs
+		`(("openblas" ,openblas-ilp64)
+			("lapack" ,lapack)
+      ))
+	 (native-inputs
+		`(("hdf5" ,hdf5)
+      ("python" ,python)
+      ("python-minimal" ,python-minimal)
+      ("openblas" ,openblas-ilp64)
+			("lapack" ,lapack)
+			("gfortran" ,gfortran)))
 	 (build-system cmake-build-system)
    (arguments
     '(#:tests? #f
@@ -136,17 +147,6 @@
                                         ;                      "-DLINALG=OpenBLAS"
                                         ;                      (string-append "-DOPENBLASROOT=" (assoc-ref (or inputs native-inputs) "openblas"))))
                                         ;                     #:tests? #f)
-	 (inputs
-		`(("openblas" ,openblas-ilp64)
-			("lapack" ,lapack)
-      ))
-	 (native-inputs
-		`(("hdf5" ,hdf5)
-      ("python" ,python)
-      ("python-minimal" ,python-minimal)
-      ("openblas" ,openblas-ilp64)
-			("lapack" ,lapack)
-			("gfortran" ,gfortran)))
 	 (home-page "https://www.openmolcas.org")
 	 (synopsis "OpenMOLCAS")
 	 (description "OpenMOLCAS")
