@@ -92,7 +92,7 @@
      (uri (git-reference
            (url "https://gitlab.com/molcas/openmolcas")
            (commit (string-append "v" version))))
-     (file-name (git-file-name name version))
+     ;(file-name (git-file-name name version))
      (sha256
       (base32 "1n6l91yyqjx0pz4w1lp3yybpq0fs2yjswfcm8c1wjfkxwiznbdxi"))))
 	 (build-system cmake-build-system)
