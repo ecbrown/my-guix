@@ -109,6 +109,8 @@
       ))
 	 (native-inputs
 		`(;("python-pytest" ,python-pytest)
+      ("openblas" ,openblas-ilp64)
+			("lapack" ,lapack)
 			("gfortran" ,gfortran)))
 	 (home-page "https://www.openmolcas.org")
 	 (synopsis "OpenMOLCAS")
