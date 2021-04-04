@@ -86,15 +86,22 @@
 	(package
 	 (name "openmolcas")
    (version "21.02")
-   (source
-    (origin
-     (method git-fetch)
-     (uri (git-reference
-           (url "https://gitlab.com/molcas/openmolcas")
-           (commit (string-append "v" version))))
-     ;(file-name (git-file-name name version))
-     (sha256
-      (base32 "1n6l91yyqjx0pz4w1lp3yybpq0fs2yjswfcm8c1wjfkxwiznbdxi"))))
+
+    (source (origin
+              (method url-fetch)
+;              (uri (string-append "https://nosignal.fi/download/ecasound-"
+;                                  version ".tar.gz"))
+              (uri "https://gitlab.com/Molcas/OpenMolcas/-/archive/v21.02/OpenMolcas-v21.02.tar.gz")
+              (sha256
+               (base32 "1m7njfjdb7sqf0lhgc4swihgdr4snkg8v02wcly08wb5ar2fr2s6"))))
+;    (source (origin
+;     (method git-fetch)
+;     (uri (git-reference
+;           (url "https://gitlab.com/molcas/openmolcas")
+;           (commit (string-append "v" version))))
+;     (file-name (git-file-name name version))
+;     (sha256
+;      (base32 "1n6l91yyqjx0pz4w1lp3yybpq0fs2yjswfcm8c1wjfkxwiznbdxi"))))
 	 (build-system cmake-build-system)
 	 (inputs
 		`(("openblas" ,openblas-ilp64)
