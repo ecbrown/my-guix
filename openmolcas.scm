@@ -106,10 +106,10 @@
 			("lapack" ,lapack)
 			("gfortran" ,gfortran)))
    (arguments
-    `(#:configure-flags
+    '(#:configure-flags
       (list "-DLINALG=OpenBLAS"
             (string-append "-DOPENBLASDIR="
-                           ,(assoc-ref inputs "openblas")))))
+                           (assoc-ref inputs "openblas")))))
 	 (home-page "https://www.openmolcas.org")
 	 (synopsis "OpenMOLCAS")
 	 (description "OpenMOLCAS")
