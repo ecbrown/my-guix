@@ -109,8 +109,7 @@
     `(#:configure-flags
       (list "-DLINALG=OpenBLAS"
             (string-append "-DOPENBLASDIR="
-                           ,(assoc-ref input "openmolcas")))
-
+                           ,(assoc-ref input "openmolcas")))))
 	 (home-page "https://www.openmolcas.org")
 	 (synopsis "OpenMOLCAS")
 	 (description "OpenMOLCAS")
