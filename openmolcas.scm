@@ -38,7 +38,8 @@
 ;  #:use-module (gnu packages glib)
 ;  #:use-module (gnu packages graphviz)
 ;  #:use-module (gnu packages gtk)
-;  #:use-module (gnu packages icu4c)
+                                        ;  #:use-module (gnu packages icu4c)
+  #:use-module (gnu packages hdf5)
 ;  #:use-module (gnu packages image)
 ;  #:use-module (gnu packages java)
 ;  #:use-module (gnu packages less)
@@ -104,14 +105,16 @@
 ;      (base32 "1n6l91yyqjx0pz4w1lp3yybpq0fs2yjswfcm8c1wjfkxwiznbdxi"))))
 	  (build-system cmake-build-system)
     (arguments
-     `(#:configure-flags '("-DLINALG=OpenBLAS")
+     `(#:configure-flags '("-DLINALG=OpenBLAS"
+                           (string-append "-DOPENBLASROOT=" (assoc-ref inputs "openblas")))
                          #:tests? #f))
 	 (inputs
 		`(("openblas" ,openblas-ilp64)
 			("lapack" ,lapack)
       ))
 	 (native-inputs
-		`(("python" ,python)
+		`(("hdf5" ,hdf5)
+      ("python" ,python)
       ("openblas" ,openblas-ilp64)
 			("lapack" ,lapack)
 			("gfortran" ,gfortran)))
