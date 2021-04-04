@@ -105,7 +105,7 @@
 	 (build-system cmake-build-system)
 	 (inputs
 		`(("openblas" ,openblas-ilp64)
-			;("lapack" ,lapack)
+			("lapack" ,lapack)
       ))
 	 (native-inputs
 		`(;("python-pytest" ,python-pytest)
