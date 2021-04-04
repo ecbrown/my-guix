@@ -1,4 +1,4 @@
-(define-module (gnu packages maths)
+(define-module (gnu packages openmolcas)
   #:use-module (ice-9 regex)
   #:use-module (ice-9 match)
   #:use-module (gnu packages)
