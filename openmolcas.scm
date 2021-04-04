@@ -52,6 +52,7 @@
 ;  #:use-module (gnu packages xorg)
 ;  #:use-module (gnu packages gl)
 ;  #:use-module (gnu packages imagemagick)
+  #:use-module (gnu packages maths)
 ;  #:use-module (gnu packages m4)
 ;  #:use-module (gnu packages mpi)
 ;  #:use-module (gnu packages multiprecision)
