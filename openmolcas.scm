@@ -112,7 +112,7 @@
                ;"-DCC=gcc"
                ;(string-append "-DCMAKE_INSTALL_SYSCONF_PREFIX=" out "/etc")
                ;(string-append "-DBASHCOMPLETIONDIR=" out "/etc/bash_completion.d"))
-         )
+         ))
        ;#:phases
        ;(modify-phases %standard-phases
        ;  (add-after 'install 'install-xsession
@@ -131,11 +131,11 @@
        ;              Type=XSession~%" out)))
        ;        #t))))
        ))
-    (arguments
-     `(#:configure-flags (list
-                          "-DLINALG=OpenBLAS"
-                          (string-append "-DOPENBLASROOT=" (assoc-ref (or inputs native-inputs) "openblas"))))
-                         #:tests? #f)
+    ;(arguments
+    ; `(#:configure-flags (list
+    ;                      "-DLINALG=OpenBLAS"
+    ;                      (string-append "-DOPENBLASROOT=" (assoc-ref (or inputs native-inputs) "openblas"))))
+    ;                     #:tests? #f)
 	 (inputs
 		`(("openblas" ,openblas-ilp64)
 			("lapack" ,lapack)
