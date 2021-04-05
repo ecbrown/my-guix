@@ -128,9 +128,10 @@
 ;                                                  "/lib/qt5/plugins/"))
 ;                                 qt)))
 ;                       #t))))))
-    `(#:configure-flags
+    `(#:tests? #f
+      #:configure-flags
       (list "-DLINALG=OpenBLAS"
-            (string-append "-DOPENBLASDIR="
+            (string-append "-DOPENBLASROOT="
                            (assoc-ref %build-inputs "openblas")))))
 	 (home-page "https://www.openmolcas.org")
 	 (synopsis "OpenMOLCAS")
