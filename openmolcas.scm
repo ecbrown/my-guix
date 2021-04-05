@@ -130,6 +130,8 @@
     `(#:tests? #f
       #:configure-flags
       (list "-DLINALG=OpenBLAS"
+            "-DBUILD_SHARED_LIBS=NO"
+            "-DBUILD_STATIC_LIB=YES"
             (string-append "-DOPENBLASROOT="
                            (assoc-ref %build-inputs "openblas")
                            "/")
