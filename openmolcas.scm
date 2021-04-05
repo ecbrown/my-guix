@@ -127,6 +127,7 @@
 ;                                                  "/lib/qt5/plugins/"))
 ;                                 qt)))
 ;                       #t))))))
+
     `(#:tests? #f
       #:configure-flags
       (list "-DLINALG=OpenBLAS"
