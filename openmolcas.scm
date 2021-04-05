@@ -131,7 +131,7 @@
       #:configure-flags
       (list "-DLINALG=OpenBLAS"
             "-DBUILD_SHARED_LIBS=NO"
-            "-DBUILD_STATIC_LIB=YES"
+            "-DBUILD_STATIC_LIBS=YES"
             (string-append "-DOPENBLASROOT="
                            (assoc-ref %build-inputs "openblas")
                            "/")
