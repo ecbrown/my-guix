@@ -131,9 +131,9 @@
     `(#:tests? #f
       #:configure-flags
       (list "-DLINALG=OpenBLAS"
-            (string-append "-DOPENBLASROOT="
-                           (assoc-ref %build-inputs "openblas")
-                           "/")
+            ;(string-append "-DOPENBLASROOT="
+            ;               (assoc-ref %build-inputs "openblas")
+            ;               "/")
             (string-append "-DOpenBLAS_INCLUDE_DIR="
                            (assoc-ref %build-inputs "openblas")
                            "/include/")
