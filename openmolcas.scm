@@ -127,20 +127,21 @@
 ;                                                  "/lib/qt5/plugins/"))
 ;                                 qt)))
 ;                       #t))))))
-
     `(#:tests? #f
       #:configure-flags
       (list "-DLINALG=OpenBLAS"
             (string-append "-DOPENBLASROOT="
                            (assoc-ref %build-inputs "openblas")
                            "/")
-            ;(string-append "-DOpenBLAS_INCLUDE_DIR="
-            ;               (assoc-ref %build-inputs "openblas")
-            ;               "/include/")
-            ;(string-append "-DOpenBLAS_LIBRARIES="
-            ;               (assoc-ref %build-inputs "openblas")
-                                        ;               "/lib/libopenblas_ilp64.so")
-            )))
+            (string-append "-DOpenBLAS_INCLUDE_DIR="
+                           (assoc-ref %build-inputs "openblas")
+                           "/include/")
+            (string-append "-DOpenBLAS_LIBRARIES="
+                           (assoc-ref %build-inputs "openblas")
+                           "/lib/libopenblas_ilp64.so")
+            (string-append "-DMOLCAS_LINALG="
+                           (assoc-ref %build-inputs "openblas")
+                           "/lib/libopenblas_ilp64.so"))))
 	 (home-page "https://www.openmolcas.org")
 	 (synopsis "OpenMOLCAS")
 	 (description "OpenMOLCAS")
