@@ -138,10 +138,10 @@
                            "/include/")
             (string-append "-DOpenBLAS_LIBRARIES="
                            (assoc-ref %build-inputs "openblas")
-                           "/lib/libopenblas_ilp64.so")
+                           "/lib/libopenblas_ilp64.a")
             (string-append "-DMOLCAS_LINALG="
                            (assoc-ref %build-inputs "openblas")
-                           "/lib/libopenblas_ilp64.so"))))
+                           "/lib/libopenblas_ilp64.a"))))
 	 (home-page "https://www.openmolcas.org")
 	 (synopsis "OpenMOLCAS")
 	 (description "OpenMOLCAS")
