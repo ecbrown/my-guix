@@ -135,7 +135,7 @@
                            (assoc-ref %build-inputs "openblas"))
             (string-append "-DOpenBLAS_LIBRARIES="
                            (assoc-ref %build-inputs "openblas")
-                           "lib/libopenmolcas_ilp64.so"))))
+                           "lib/libopenblas_ilp64.so"))))
 	 (home-page "https://www.openmolcas.org")
 	 (synopsis "OpenMOLCAS")
 	 (description "OpenMOLCAS")
