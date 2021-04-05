@@ -132,10 +132,11 @@
       #:configure-flags
       (list "-DLINALG=OpenBLAS"
             (string-append "-DOPENBLASROOT="
-                           (assoc-ref %build-inputs "openblas"))
+                           (assoc-ref %build-inputs "openblas")
+                           "/")
             (string-append "-DOpenBLAS_INCLUDE_DIR="
                            (assoc-ref %build-inputs "openblas")
-                           "/include")
+                           "/include/")
             (string-append "-DOpenBLAS_LIBRARIES="
                            (assoc-ref %build-inputs "openblas")
                            "/lib/libopenblas_ilp64.so"))))
