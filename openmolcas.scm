@@ -106,7 +106,6 @@
 			("lapack" ,lapack)
 			("gfortran" ,gfortran)))
    (arguments
-
 ;    `(#:tests? #f
 ;               #:configure-flags
 ;               (list "-DBUILD_TESTING=OFF"
