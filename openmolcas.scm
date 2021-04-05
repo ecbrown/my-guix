@@ -96,14 +96,14 @@
 	 (build-system cmake-build-system)
 	 (inputs
 		`(("openblas" ,openblas-ilp64)
-			("lapack" ,lapack)
+			;("lapack" ,lapack)
       ))
 	 (native-inputs
 		`(("hdf5" ,hdf5)
       ("python" ,python)
       ("python-minimal" ,python-minimal)
-      ("openblas" ,openblas-ilp64)
-			("lapack" ,lapack)
+      ;("openblas" ,openblas-ilp64)
+			;("lapack" ,lapack)
 			("gfortran" ,gfortran)))
    (arguments
 ;    `(#:tests? #f
