@@ -129,22 +129,22 @@
 ;                       #t))))))
     `(#:tests? #f
       #:configure-flags
-      (list "-DLINALG=Internal"
-;            "-DBUILD_SHARED_LIBS=NO"
-;            "-DBUILD_STATIC_LIBS=YES"
-;            "-DLIBOPENBLAS=YES"
-;            (string-append "-DOPENBLASROOT="
-;                           (assoc-ref %build-inputs "openblas")
-;                           "/")
-;            (string-append "-DOpenBLAS_INCLUDE_DIR="
-;                           (assoc-ref %build-inputs "openblas")
-;                           "/include/")
-;            (string-append "-DOpenBLAS_LIBRARIES="
-;                           (assoc-ref %build-inputs "openblas")
-;                           "/lib/libopenblas_ilp64.a")
-;            (string-append "-DMOLCAS_LINALG="
-;                           (assoc-ref %build-inputs "openblas")
-;                           "/lib/libopenblas_ilp64.a")
+      (list "-DLINALG=Runtime"
+            "-DBUILD_SHARED_LIBS=NO"
+            "-DBUILD_STATIC_LIBS=YES"
+            "-DLIBOPENBLAS=YES"
+            (string-append "-DOPENBLASROOT="
+                           (assoc-ref %build-inputs "openblas")
+                           "/")
+            (string-append "-DOpenBLAS_INCLUDE_DIR="
+                           (assoc-ref %build-inputs "openblas")
+                           "/include/")
+            (string-append "-DOpenBLAS_LIBRARIES="
+                           (assoc-ref %build-inputs "openblas")
+                           "/lib/libopenblas_ilp64.a")
+            (string-append "-DMOLCAS_LINALG="
+                           (assoc-ref %build-inputs "openblas")
+                           "/lib/libopenblas_ilp64.a")
             )))
 	 (home-page "https://www.openmolcas.org")
 	 (synopsis "OpenMOLCAS")
